@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <h1>汉森马拉松训练法配速表</h1>
   <DataTable :data="paceArray" />
 
 </template>

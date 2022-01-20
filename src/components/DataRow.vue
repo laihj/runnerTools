@@ -27,11 +27,11 @@ export default {
 <style scoped>
 
 td {
-    padding: 5px;
+    padding: 10px;
 }
 
 table tr:nth-child(odd) {
-    background: #ccc;
+    background: rgba(196, 199, 195, 0.859);
 }
 
 h3 {

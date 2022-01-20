@@ -43,6 +43,7 @@ export default {
 table {
     width: 90%;
     border-collapse: collapse;
+    border-color: #acd7c3;
     margin: 0 auto;
 
 }
@@ -50,11 +51,11 @@ table {
 th {
     color: white;
     background: #42b983;
-    padding: 5px;
+    padding: 10px;
 }
 
 td {
-    padding: 5px;
+    padding: 10px;
 }
 
 /* table tr:nth-child(odd) {
