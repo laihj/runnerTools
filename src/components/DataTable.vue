@@ -1,28 +1,24 @@
 <template>
   <div class="hello">
-      <table border="1">
-    <tr>
-        <th>全马目标</th>
-        <th>半马目标</th>
-        <th>恢复</th>
-        <th>轻松跑A</th>
-        <th>轻松跑B</th>
-        <th>LSD</th>
-        <th>马拉松配速</th>
-        <th>力量跑</th>
-        <th>速度跑A</th>
-        <th>速度跑B</th>
-    </tr>
-    <DataRow v-for="datarow in data"
-    :key="datarow[0]"
-    :rowdata="datarow" />
-</table>
-
+    <el-table :data="data" border stripe 
+    :header-cell-style="{'text-align':'center', background:'#42b983',color:'#fff','font-size':'1.3em'}" 
+    :cell-style="{'text-align':'center','font-size':'1.2em'}" 
+    :header-row-style="{background: '#555'}" >
+      <el-table-column prop="full" label="全马目标"  />
+      <el-table-column prop="half" label="半马目标"  />
+      <el-table-column prop="recovery" label="恢复" />
+      <el-table-column prop="easyslow" label="轻松跑慢" />
+      <el-table-column prop="easyfast" label="轻松跑快" />
+      <el-table-column prop="lsd" label="LSD" />
+      <el-table-column prop="tempo" label="马拉松配速" />
+      <el-table-column prop="strenght" label="力量跑" />
+      <el-table-column prop="10k" label="10公里" />
+      <el-table-column prop="5k" label="5公里" />
+    </el-table>
   </div>
 </template>
 
 <script>
-import DataRow from './DataRow.vue'
 
 export default {
   name: 'DataTable',
@@ -30,7 +26,6 @@ export default {
     data: Array
   },
   components: {
-    DataRow,
   }
 }
 
@@ -40,40 +35,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-table {
+.hello {
+  margin: 0 auto;
+
+}
+
+.el-table {
     width: 90%;
     border-collapse: collapse;
     border-color: #acd7c3;
     margin: 0 auto;
-
 }
 
-th {
-    color: white;
-    background: #42b983;
-    padding: 10px;
-}
 
-td {
-    padding: 10px;
+.el-table-column {
+  text-align: center;
 }
 
 /* table tr:nth-child(odd) {
     background: #ccc;
 } */
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

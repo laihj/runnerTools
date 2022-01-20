@@ -1,7 +1,7 @@
 <template>
     <tr>
-        <td>{{ rowdata[0] }}</td>
-        <td>{{ rowdata[1] }}</td>
+        <td>{{ rowdata.full }}</td>
+        <td>{{ rowdata.half }}</td>
         <td>{{ rowdata[2] }}</td>
         <td>{{ rowdata[3] }}</td>
         <td>{{ rowdata[4] }}</td>
