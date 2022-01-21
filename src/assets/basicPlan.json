@@ -46,20 +46,33 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑 5 公里"
+                    "desc": "轻松跑"
                 },
                 {    
                     "day": 6,
-                    "type": "easy",
+                    "type": "speed",
                     "warm": false,
                     "excise" : [
                         {
-                            "distance":5,
-                            "paceType":"easy"
+                            "distance":0.8,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.8,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑 5 公里"
+                    "desc": "速度跑",
+                    "excisedesc": "400米间歇 400米休息 10组"
                 },
                 {    
                     "day": 7,
@@ -72,7 +85,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑 5 公里"
+                    "desc": "轻松跑"
                 }
             ]
     }

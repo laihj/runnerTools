@@ -17,38 +17,59 @@
         <el-table-column prop="recovery" label="周一" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 0) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 0) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="easyslow" label="周二" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 1) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 1) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="easyfast" label="周三" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 2) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 2) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="lsd" label="周四" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 3) }}</span>
+            <br />
+            <span>{{ exciseDiscriptionOfDay(scope.row, 3) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 3) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="tempo" label="周五" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 4) }}</span>
+            <br />
+            <span>{{ exciseDiscriptionOfDay(scope.row, 4) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 4) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="strenght" label="周六" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 5) }}</span>
+            <br />
+            <span>{{ exciseDiscriptionOfDay(scope.row, 5) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 5) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="10k" label="周日" >
           <template #default="scope">
             <span>{{ discriptionOfWeekDay(scope.row, 6) }}</span>
+            <br />
+            <span>{{ distanceOfDay(scope.row, 6) }}</span>
           </template>
         </el-table-column>
+
         <el-table-column prop="5k" label="周跑量" >
           <template #default="scope">
             <span>{{ distanceOfWeek(scope.row) }}</span>
@@ -68,9 +89,6 @@
       @row-click="rowClick"
     >
       <el-table-column prop="full" label="全马目标">
-        <template #default="scope">
-          <span>{{ dataOfRow(scope.row) }}</span>
-        </template>
       </el-table-column>
       <el-table-column prop="half" label="半马目标" />
       <el-table-column prop="recovery" label="恢复" />
@@ -120,12 +138,32 @@ export default {
         this.selectedRow = ""
       }
     },
-    dataOfRow(row) {
-      return row.lsd
-    },
     discriptionOfWeekDay(week,day) {
-      return week.schedule[day].desc
+      return week.schedule[day].desc;
     },
+    exciseDiscriptionOfDay(week,day) {
+      return week.schedule[day].excisedesc;
+    },
+    distanceOfDay(week, day) {
+      var runSchedule = week.schedule[day]
+      var distance = 0
+      if(runSchedule.warm) {
+        distance += 0
+      }
+      if(runSchedule.cold) {
+        distance += 0
+      }
+      for (var runi in runSchedule.excise) {
+        var runDistance = runSchedule.excise[runi]
+        distance += runDistance.distance
+      }
+      if (distance > 0) {
+        return distance + " 公里"
+      } else {
+        return ""
+      }
+    },
+
     distanceOfWeek(week) {
       var distance = 0
       for(var i in week.schedule) {
