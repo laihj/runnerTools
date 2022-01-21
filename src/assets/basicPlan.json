@@ -72,7 +72,97 @@
                     ],
                     "cold": false,
                     "desc": "速度跑",
-                    "excisedesc": "400米间歇 400米休息 10组"
+                    "excisedesc": "10 组 400米间歇 400米恢复"
+                },
+                {    
+                    "day": 7,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑"
+                }
+            ]
+    },
+    {
+        "week": 2,
+        "schedule": 
+            [
+                {    
+                    "day": 1,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 2,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 3,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 4,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 5,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑"
+                },
+                {    
+                    "day": 6,
+                    "type": "speed",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":0.8,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.8,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "速度跑",
+                    "excisedesc": "10 组 400米间歇 400米恢复"
                 },
                 {    
                     "day": 7,
