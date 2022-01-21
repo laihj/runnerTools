@@ -1,0 +1,79 @@
+[
+    {
+        "week": 1,
+        "schedule": 
+            [
+                {    
+                    "day": 1,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 2,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 3,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 4,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 5,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑 5 公里"
+                },
+                {    
+                    "day": 6,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑 5 公里"
+                },
+                {    
+                    "day": 7,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑 5 公里"
+                }
+            ]
+    }
+]
