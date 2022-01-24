@@ -14,20 +14,20 @@
                 {    
                     "day": 2,
                     "type": "tempo",
-                    "warm": false,
+                    "warm": true,
                     "excise" : [
                         {
                             "distance":8,
                             "paceType":"tempo"
                         }
                     ],
-                    "cold": false,
+                    "cold": true,
                     "desc": "节奏跑"
                 },
                 {    
                     "day": 3,
                     "type": "strenght",
-                    "warm": false,
+                    "warm": true,
                     "excise" : [
                         {
                             "distance":1.6,
@@ -46,7 +46,7 @@
                             "paceType":"recover"
                         }
                     ],
-                    "cold": false,
+                    "cold": true,
                     "desc": "力量跑",
                     "excisedesc": "2 组 1.6公里间歇 400米恢复"
                 },
@@ -79,7 +79,7 @@
                 {    
                     "day": 6,
                     "type": "speed",
-                    "warm": false,
+                    "warm": true,
                     "excise" : [
                         {
                             "distance":0.4,
@@ -162,7 +162,7 @@
                             "paceType":"recover"
                         }
                     ],
-                    "cold": false,
+                    "cold": true,
                     "desc": "速度跑",
                     "excisedesc": "10 组 400米间歇 400米恢复"
                 },

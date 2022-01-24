@@ -1,4 +1,28 @@
 <template>
+  <div id="pace">
+    <el-table
+      :data="tableData"
+      border
+      stripe
+      :header-cell-style="{ 'text-align': 'center', background: '#42b983', color: '#fff', 'font-size': '1.3em' }"
+      :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
+      :header-row-style="{ background: '#555' }"
+      @row-click="rowClick"
+    >
+      <el-table-column prop="full" label="全马目标">
+      </el-table-column>
+      <el-table-column prop="half" label="半马目标" />
+      <el-table-column prop="recovery" label="恢复" />
+      <el-table-column prop="easyslow" label="轻松跑慢" />
+      <el-table-column prop="easyfast" label="轻松跑快" />
+      <el-table-column prop="lsd" label="LSD" />
+      <el-table-column prop="tempo" label="马拉松配速" />
+      <el-table-column prop="strenght" label="力量跑" />
+      <el-table-column prop="ten" label="10公里" />
+      <el-table-column prop="five" label="5公里" />
+    </el-table>
+  </div>
+  <br />
   <div id="plan" v-if="!showAll">
     <h3>plan</h3>
     <div id="planOperation">
@@ -58,30 +82,6 @@
       </el-table>
     </div>
   </div>
-  <div id="pace">
-    <el-table
-      :data="tableData"
-      border
-      stripe
-      :header-cell-style="{ 'text-align': 'center', background: '#42b983', color: '#fff', 'font-size': '1.3em' }"
-      :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
-      :header-row-style="{ background: '#555' }"
-      @row-click="rowClick"
-    >
-      <el-table-column prop="full" label="全马目标">
-      </el-table-column>
-      <el-table-column prop="half" label="半马目标" />
-      <el-table-column prop="recovery" label="恢复" />
-      <el-table-column prop="easyslow" label="轻松跑慢" />
-      <el-table-column prop="easyfast" label="轻松跑快" />
-      <el-table-column prop="lsd" label="LSD" />
-      <el-table-column prop="tempo" label="马拉松配速" />
-      <el-table-column prop="strenght" label="力量跑" />
-      <el-table-column prop="ten" label="10公里" />
-      <el-table-column prop="five" label="5公里" />
-    </el-table>
-  </div>
-
 </template>
 
 <script>
@@ -146,10 +146,10 @@ export default {
       var runSchedule = week.schedule[day]
       var distance = 0
       if(runSchedule.warm) {
-        distance += 0
+        distance += 1.6
       }
       if(runSchedule.cold) {
-        distance += 0
+        distance += 1.7
       }
       for (var runi in runSchedule.excise) {
         var runDistance = runSchedule.excise[runi]
@@ -163,10 +163,10 @@ export default {
       for(var i in week.schedule) {
         var runSchedule = week.schedule[i]
         if(runSchedule.warm) {
-          distance += 0
+          distance += 1.6
         }
         if(runSchedule.cold) {
-          distance += 0
+          distance += 1.7
         }
         for (var runi in runSchedule.excise) {
           var runDistance = runSchedule.excise[runi]
@@ -214,8 +214,17 @@ export default {
           slowDuration += distance * slowSecond
           fastDuration += distance * fastSecond
         }
-        console.log(slowDuration)
-        console.log(fastDuration)
+        slowSecond = that.$options.methods.secondOfString(row.easyslow)
+        fastSecond = that.$options.methods.secondOfString(row.easyfast)
+        if(runSchedule.warm) {
+          slowDuration += 1.6 * slowSecond
+          fastDuration += 1.6 * fastSecond
+        }
+        if(runSchedule.cold) {
+          slowDuration += 1.7 * slowSecond
+          fastDuration += 1.7 * fastSecond
+        }
+
         if(fastDuration == 0) {
           return ""
         }
@@ -233,9 +242,6 @@ export default {
       let se = Math.round(second % 60)
       return hour.toString().padStart(2,"0") + ":" + minite.toString().padStart(2,"0") + ":" + se.toString().padStart(2, "0")
     }
-  },
-  setup() {
-    
   }
 }
 
