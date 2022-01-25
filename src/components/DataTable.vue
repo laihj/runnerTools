@@ -44,7 +44,7 @@
         :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
         :header-row-style="{ background: '#555' }"
       >
-        <el-table-column prop="week" label="周数" />
+        <el-table-column prop="week" label="周数" width="100" />
         <el-table-column prop="recovery" label="周一" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 0)"></span>
@@ -81,13 +81,15 @@
           </template>
         </el-table-column>
 
-        <el-table-column prop="5k" label="周跑量" >
+        <el-table-column prop="5k" label="周跑量" width="200" >
           <template #default="scope">
             <span>{{ distanceOfWeek(scope.row) }}</span>
           </template>
         </el-table-column>
       </el-table>
     </div>
+    <br />
+    <el-button type="primary" @click="print">打印计划</el-button>
   </div>
 </template>
 
@@ -253,7 +255,10 @@ export default {
       if (event) {
         alert(event.target.tagName)
       }
-    }
+    },
+    print() {
+      this.$htmlToPaper("printMe");
+    },
   }
 }
 
