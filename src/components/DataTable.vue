@@ -25,19 +25,14 @@
   <br />
   <div id="plan" v-if="!showAll">
     <div class="opration">
-      <el-row :gutter="20">
+      <!-- <el-row :gutter="20">
         <el-col :span="16"><el-input v-model="input" placeholder="Please input" /></el-col>
-      </el-row>
+      </el-row> -->
       <el-row :gutter="20">
         <el-col :span="2"><div>热身距离</div></el-col>
-        <el-col :span="10"><el-input v-model="input" placeholder="热身距离" /></el-col>
+        <el-col :span="2"><el-input v-model="warm" placeholder="热身距离" /></el-col>
         <el-col :span="2"><div>缓和距离</div></el-col>
-        <el-col :span="10"><el-input v-model="input" placeholder="Please input" /></el-col>
-      </el-row>
-      <el-row :gutter="20">
-        <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="18"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="2"><el-button type="primary" @click="refresh" >刷新一下</el-button></el-col>
+        <el-col :span="2"><el-input v-model="cold" placeholder="Please input" /></el-col>
       </el-row>
     </div>
     <div id="planTable">
@@ -111,7 +106,8 @@ export default {
       selectedDataRow: "abc",
       basicPlanData: basicPlan,
       selectedPlanData: basicPlan,
-      input:""
+      warm:"",
+      cold:""
     }
   },
   components: {
@@ -140,52 +136,41 @@ export default {
       if(exciseDesc != undefined) {
         description = description + '<br />' + exciseDesc
       }
-      var distance = this.$options.methods.distanceOfDay(week,day,this.input)
+      var distance = this.$options.methods.distanceOfDay(week,day,this.warm,this.cold)
       if(distance > 0) {
-        description = description + '<br />' + distance + ' 公里'
+        description = description + '<br />' + distance.toFixed(1) + ' 公里'
       }
-      var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow)
+      var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow,this.warm,this.cold)
       if(duration.length > 0) {
         description = description + '<br />' + duration
       }
-      // var seconds = secondOfString('12:13')
-      // console.log(seconds)
       return description;
     },
-    distanceOfDay(week, day, warm) {
+    distanceOfDay(week, day, warm,cold) {
       var runSchedule = week.schedule[day]
       var distance = 0
       if(runSchedule.warm) {
-        console.log(warm)
         if(warm.length > 0) {
           distance += parseFloat(warm)
         }
-        // 
       }
       if(runSchedule.cold) {
-        distance += 1.7
+        if(cold.length > 0) {
+          distance += parseFloat(cold)
+        }
       }
       for (var runi in runSchedule.excise) {
         var runDistance = runSchedule.excise[runi]
         distance += runDistance.distance
       }
-      return distance.toFixed(1)
+      return distance
     },
 
     distanceOfWeek(week) {
       var distance = 0
       for(var i in week.schedule) {
-        var runSchedule = week.schedule[i]
-        if(runSchedule.warm) {
-          distance += 1.6
-        }
-        if(runSchedule.cold) {
-          distance += 1.7
-        }
-        for (var runi in runSchedule.excise) {
-          var runDistance = runSchedule.excise[runi]
-          distance += runDistance.distance
-        }
+        var distanceDay = this.$options.methods.distanceOfDay(week,i,this.warm,this.cold)
+        distance += distanceDay;
       }
       return distance.toFixed(1);
     },
@@ -193,7 +178,7 @@ export default {
       let timeArray = time.split(':')
       return parseInt(timeArray[0]) * 60 + parseInt(timeArray[1])
     },
-    durationOfDay(that,week,day,row) {
+    durationOfDay(that,week,day,row,warm,cold) {
       var runSchedule = week.schedule[day]
       if(row == undefined) {
         return ""
@@ -231,12 +216,17 @@ export default {
         slowSecond = that.$options.methods.secondOfString(row.easyslow)
         fastSecond = that.$options.methods.secondOfString(row.easyfast)
         if(runSchedule.warm) {
-          slowDuration += 1.6 * slowSecond
-          fastDuration += 1.6 * fastSecond
+          if(warm.length > 0) {
+            slowDuration += parseFloat(warm) * slowSecond
+            fastDuration += parseFloat(warm) * fastSecond
+          }
+          
         }
         if(runSchedule.cold) {
-          slowDuration += 1.7 * slowSecond
-          fastDuration += 1.7 * fastSecond
+          if(cold.length > 0) {
+            slowDuration += parseFloat(cold) * slowSecond
+            fastDuration += parseFloat(cold) * fastSecond
+          }
         }
 
         if(fastDuration == 0) {
