@@ -24,9 +24,21 @@
   </div>
   <br />
   <div id="plan" v-if="!showAll">
-    <h3>plan</h3>
-    <div id="planOperation">
-      <h3>操作区</h3>
+    <div class="opration">
+      <el-row :gutter="20">
+        <el-col :span="16"><el-input v-model="input" placeholder="Please input" /></el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="2"><div>热身距离</div></el-col>
+        <el-col :span="10"><el-input v-model="input" placeholder="热身距离" /></el-col>
+        <el-col :span="2"><div>缓和距离</div></el-col>
+        <el-col :span="10"><el-input v-model="input" placeholder="Please input" /></el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="18"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="2"><el-button type="primary" @click="refresh" >刷新一下</el-button></el-col>
+      </el-row>
     </div>
     <div id="planTable">
       <el-table
@@ -85,7 +97,6 @@
 </template>
 
 <script>
-
 import basicPlan from '../assets/basicPlan.json'
 
 export default {
@@ -99,15 +110,14 @@ export default {
       showAll: true,
       selectedDataRow: "abc",
       basicPlanData: basicPlan,
-      selectedPlanData: basicPlan
+      selectedPlanData: basicPlan,
+      input:""
     }
   },
   components: {
   },
   methods: {
     rowClick(row) {
-      // this.tableData = [row]
-      // alert(row.full)
       if (this.showAll) {
         this.tableData = [row]
         // this.$options.data.selectedDataRow = "abc"
@@ -130,7 +140,7 @@ export default {
       if(exciseDesc != undefined) {
         description = description + '<br />' + exciseDesc
       }
-      var distance = this.$options.methods.distanceOfDay(week,day)
+      var distance = this.$options.methods.distanceOfDay(week,day,this.input)
       if(distance > 0) {
         description = description + '<br />' + distance + ' 公里'
       }
@@ -142,11 +152,15 @@ export default {
       // console.log(seconds)
       return description;
     },
-    distanceOfDay(week, day) {
+    distanceOfDay(week, day, warm) {
       var runSchedule = week.schedule[day]
       var distance = 0
       if(runSchedule.warm) {
-        distance += 1.6
+        console.log(warm)
+        if(warm.length > 0) {
+          distance += parseFloat(warm)
+        }
+        // 
       }
       if(runSchedule.cold) {
         distance += 1.7
@@ -241,6 +255,14 @@ export default {
       let minite = Math.floor((second - hour * 3600) / 60)
       let se = Math.round(second % 60)
       return hour.toString().padStart(2,"0") + ":" + minite.toString().padStart(2,"0") + ":" + se.toString().padStart(2, "0")
+    },
+    refresh(event) {
+      // `this` inside methods points to the current active instance
+      alert('Hello ' + this.input + '!')
+      // `event` is the native DOM event
+      if (event) {
+        alert(event.target.tagName)
+      }
     }
   }
 }
@@ -249,7 +271,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.el-row {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.el-row:last-child {
+  margin-bottom: 0;
+}
+.el-col {
+  border-radius: 4px;
+}
 .hello {
+  margin: 0 auto;
+}
+.opration {
+  width: 90%;
   margin: 0 auto;
 }
 

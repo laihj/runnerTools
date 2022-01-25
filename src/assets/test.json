@@ -1,0 +1,274 @@
+[
+    {
+        "week": 1,
+        "schedule": 
+            [
+                {    
+                    "day": 1,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 2,
+                    "type": "tempo",
+                    "warm": true,
+                    "excise" : [
+                        {
+                            "distance":8,
+                            "paceType":"tempo"
+                        }
+                    ],
+                    "cold": true,
+                    "desc": "节奏跑"
+                },
+                {    
+                    "day": 3,
+                    "type": "strenght",
+                    "warm": true,
+                    "excise" : [
+                        {
+                            "distance":1.6,
+                            "paceType":"strenght"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":1.6,
+                            "paceType":"strenght"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        }
+                    ],
+                    "cold": true,
+                    "desc": "力量跑",
+                    "excisedesc": "2 组 1.6公里间歇 400米恢复"
+                },
+                {    
+                    "day": 4,
+                    "type": "lsd",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":16,
+                            "paceType":"lsd"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "长距离"
+                },
+                {    
+                    "day": 5,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑"
+                },
+                {    
+                    "day": 6,
+                    "type": "speed",
+                    "warm": true,
+                    "excise" : [
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        }
+                    ],
+                    "cold": true,
+                    "desc": "速度跑",
+                    "excisedesc": "10 组 400米间歇 400米恢复"
+                },
+                {    
+                    "day": 7,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑"
+                }
+            ]
+    },
+    {
+        "week": 2,
+        "schedule": 
+            [
+                {    
+                    "day": 1,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 2,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 3,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 4,
+                    "type": "rest",
+                    "warm": false,
+                    "excise" : [],
+                    "cold": false,
+                    "desc": "休息"
+                },
+                {    
+                    "day": 5,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑"
+                },
+                {    
+                    "day": 6,
+                    "type": "speed",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":0.8,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        },
+                        {
+                            "distance":0.8,
+                            "paceType":"speed"
+                        },
+                        {
+                            "distance":0.4,
+                            "paceType":"recover"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "速度跑",
+                    "excisedesc": "10 组 400米间歇 400米恢复"
+                },
+                {    
+                    "day": 7,
+                    "type": "easy",
+                    "warm": false,
+                    "excise" : [
+                        {
+                            "distance":5,
+                            "paceType":"easy"
+                        }
+                    ],
+                    "cold": false,
+                    "desc": "轻松跑"
+                }
+            ]
+    }
+]
