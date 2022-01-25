@@ -23,18 +23,18 @@
     </el-table>
   </div>
   <br />
+  <br />
   <div id="plan" v-if="!showAll">
     <div class="opration">
-      <!-- <el-row :gutter="20">
-        <el-col :span="16"><el-input v-model="input" placeholder="Please input" /></el-col>
-      </el-row> -->
       <el-row :gutter="20">
         <el-col :span="2"><div>热身距离</div></el-col>
-        <el-col :span="2"><el-input v-model="warm" placeholder="热身距离" /></el-col>
+        <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
+        <el-col :span="1"><div></div></el-col>
         <el-col :span="2"><div>缓和距离</div></el-col>
-        <el-col :span="2"><el-input v-model="cold" placeholder="Please input" /></el-col>
+        <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
       </el-row>
     </div>
+    <br />
     <div id="planTable">
       <el-table
         :data="selectedPlanData"
@@ -106,8 +106,8 @@ export default {
       selectedDataRow: "abc",
       basicPlanData: basicPlan,
       selectedPlanData: basicPlan,
-      warm:"",
-      cold:""
+      warm:"1.6",
+      cold:"1.6"
     }
   },
   components: {
@@ -234,9 +234,9 @@ export default {
         }
 
         if(slowDuration == fastDuration) {
-          return "预计: "+that.$options.methods.stringOfSecond(fastDuration)
+          return that.$options.methods.stringOfSecond(fastDuration)
         } else {
-          return "预计: "+that.$options.methods.stringOfSecond(fastDuration) + "-" + that.$options.methods.stringOfSecond(slowDuration)
+          return that.$options.methods.stringOfSecond(fastDuration) + "-" + that.$options.methods.stringOfSecond(slowDuration)
         }
       }      
     },
