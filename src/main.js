@@ -1,9 +1,11 @@
 import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import installElementPlus from './plugins/element'
-// import VueHtmlToPaper from 'vue-html-to-paper'
+import htmlToPdf from './plugins/htmlToPdf' //相对路径
 
+// import VueHtmlToPaper from 'vue-html-to-pape
 const app = createApp(App)
 installElementPlus(app)
-// app.use(VueHtmlToPaper)
+app.use(htmlToPdf)
 app.mount('#app')

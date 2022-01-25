@@ -1,4 +1,5 @@
-<template>
+<template id="alldata">
+<div id="printplan">
   <div id="pace">
     <el-table
       :data="tableData"
@@ -88,13 +89,20 @@
         </el-table-column>
       </el-table>
     </div>
-    <br />
-    <el-button type="primary" @click="print">打印计划</el-button>
+    
   </div>
+</div>
+  <br />
+  <br />
+  <el-button type="primary" @click="print" >打印计划</el-button>
+  <br />
+  <br />
 </template>
 
 <script>
 import basicPlan from '../assets/basicPlan.json'
+import html2Canvas from "html2canvas";
+import JsPDF from "jspdf";
 
 export default {
   name: 'DataTable',
@@ -109,7 +117,8 @@ export default {
       basicPlanData: basicPlan,
       selectedPlanData: basicPlan,
       warm:"1.6",
-      cold:"1.6"
+      cold:"1.6",
+      printLayout:false
     }
   },
   components: {
@@ -257,7 +266,42 @@ export default {
       }
     },
     print() {
-      this.$htmlToPaper("printMe");
+      window.pageYOffset = 0;
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      html2Canvas(document.querySelector(`#printplan`), {
+        allowTaint: true,
+        taintTest: false,
+        useCORS: true,
+        dpi: window.devicePixelRatio * 4,
+        scale: 4,
+      }).then(function(canvas) {
+        let contentWidth = canvas.width;
+        let contentHeight = canvas.height;
+        let pageHeight = (contentWidth / 592.28) * 841.89;
+        let leftHeight = contentHeight;
+        let position = 0;
+        let imgWidth = 595.28;
+        let imgHeight = (592.28 / contentWidth) * contentHeight;
+        let pageData = new Image();
+        pageData.setAttribute("crossOrigin", "Anonymous");
+        pageData = canvas.toDataURL("image/jpeg", 1.0);
+        let PDF = new JsPDF("", "pt", "a4");
+        if (leftHeight < pageHeight) {
+          PDF.addImage(pageData, "JPEG", 0, 0, imgWidth, imgHeight);
+        } else {
+          while (leftHeight > 0) {
+            PDF.addImage(pageData, "JPEG", 0, position, imgWidth, imgHeight);
+            leftHeight -= pageHeight;
+            position -= 841.89;
+            if (leftHeight > 0) {
+              PDF.addPage();
+            }
+          }
+        }
+        PDF.save("plan" + ".pdf");
+      });
     },
   }
 }
