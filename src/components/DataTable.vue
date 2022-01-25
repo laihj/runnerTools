@@ -46,43 +46,43 @@
         :header-row-style="{ background: '#555' }"
       >
         <el-table-column prop="week" label="周数" width="100" />
-        <el-table-column prop="recovery" label="周一" >
+        <el-table-column label="周一" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 0)"></span>
           </template>
         </el-table-column>
-        <el-table-column prop="easyslow" label="周二" >
+        <el-table-column label="周二" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 1)"></span>
           </template>
         </el-table-column>
-        <el-table-column prop="easyfast" label="周三" >
+        <el-table-column label="周三" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 2)"></span>
           </template>
         </el-table-column>
-        <el-table-column prop="lsd" label="周四" >
+        <el-table-column label="周四" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 3)"></span>
           </template>
         </el-table-column>
-        <el-table-column prop="tempo" label="周五" >
+        <el-table-column label="周五" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 4)"></span>
           </template>
         </el-table-column>
-        <el-table-column prop="strenght" label="周六" >
+        <el-table-column label="周六" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 5)"></span>
           </template>
         </el-table-column>
-        <el-table-column prop="10k" label="周日" >
+        <el-table-column label="周日" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 6)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column prop="5k" label="周跑量" width="200" >
+        <el-table-column label="周跑量" width="200" >
           <template #default="scope">
             <span>{{ distanceOfWeek(scope.row) }}</span>
           </template>
