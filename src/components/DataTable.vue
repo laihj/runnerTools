@@ -27,6 +27,20 @@
   <br />
   <div id="plan" v-if="!showAll">
     <div class="opration">
+        
+  <el-row :gutter="20">
+        <el-col :span="4">
+          <el-select v-model="planType" class="m-2" placeholder="选择计划" size="large" @change="selectOne">
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.label"
+            >
+            </el-option>
+          </el-select>
+        </el-col>
+      </el-row>
       <el-row :gutter="20">
         <el-col :span="2"><div>热身距离</div></el-col>
         <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
@@ -100,9 +114,10 @@
 </template>
 
 <script>
-import basicPlan from '../assets/advancePlan.json'
-import html2Canvas from "html2canvas";
-import JsPDF from "jspdf";
+import basicPlan from '../assets/basicPlan.json'
+import advancePlan from '../assets/advancePlan.json'
+import html2Canvas from "html2canvas"
+import JsPDF from "jspdf"
 
 export default {
   name: 'DataTable',
@@ -114,16 +129,32 @@ export default {
       tableData: this.data,
       showAll: true,
       selectedDataRow: "abc",
-      basicPlanData: basicPlan,
       selectedPlanData: basicPlan,
       warm:"1.6",
       cold:"1.6",
-      printLayout:false
+      printLayout:false,
+      planType: "初级跑步计划",
+      options : [
+            {
+              value: 'basic',
+              label: '初级跑步计划',
+            },
+            {
+              value: 'advance',
+              label: '高级跑步计划',
+            }]
     }
   },
   components: {
   },
   methods: {
+    selectOne(event,item) {
+        if(this.planType == '初级跑步计划') {
+          this.selectedPlanData = basicPlan
+        } else {
+          this.selectedPlanData = advancePlan
+        }
+    },
     rowClick(row) {
       if (this.showAll) {
         this.tableData = [row]
