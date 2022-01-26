@@ -27,10 +27,9 @@
   <br />
   <div id="plan" v-if="!showAll">
     <div class="opration">
-        
-  <el-row :gutter="20">
+      <el-row :gutter="20">
         <el-col :span="4">
-          <el-select v-model="planType" class="m-2" placeholder="选择计划" size="large" @change="selectOne">
+          <el-select v-model="planType" placeholder="选择计划" size="large" @change="selectOne">
             <el-option
               v-for="item in options"
               :key="item.value"
@@ -40,12 +39,10 @@
             </el-option>
           </el-select>
         </el-col>
-      </el-row>
-      <el-row :gutter="20">
-        <el-col :span="2"><div>热身距离</div></el-col>
+        <el-col :span="1.4"><div>热身距离</div></el-col>
         <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
         <el-col :span="1"><div></div></el-col>
-        <el-col :span="2"><div>缓和距离</div></el-col>
+        <el-col :span="1.4"><div>缓和距离</div></el-col>
         <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
       </el-row>
     </div>
@@ -355,8 +352,8 @@ export default {
   margin: 0 auto;
 }
 .opration {
-  width: 90%;
-  margin: 0 auto;
+  width: 95%;
+  margin: auto;
 }
 
 .el-table {
