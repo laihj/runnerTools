@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import basicPlan from '../assets/basicPlan.json'
+import basicPlan from '../assets/advancePlan.json'
 import html2Canvas from "html2canvas";
 import JsPDF from "jspdf";
 
