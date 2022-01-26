@@ -1,5 +1,7 @@
 <template id="alldata">
 <div id="printplan">
+  <br />
+  <br />
   <div id="pace">
     <el-table
       :data="tableData"
@@ -49,6 +51,7 @@
     <br />
     <div id="planTable">
       <el-table
+        v-loading="loading"
         :data="selectedPlanData"
         border
         stripe
@@ -115,6 +118,7 @@ import basicPlan from '../assets/basicPlan.json'
 import advancePlan from '../assets/advancePlan.json'
 import html2Canvas from "html2canvas"
 import JsPDF from "jspdf"
+import { ElLoading } from 'element-plus'
 
 export default {
   name: 'DataTable',
@@ -130,6 +134,7 @@ export default {
       warm:"1.6",
       cold:"1.6",
       printLayout:false,
+      loading:false,
       planType: "初级跑步计划",
       options : [
             {
@@ -294,9 +299,14 @@ export default {
       }
     },
     print() {
-      window.pageYOffset = 0;
+      window.pageYOffset = 100;
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
+      const loading = ElLoading.service({
+        lock: true,
+        text: 'PDF生成后下载',
+        background: 'rgba(0, 0, 0, 0.7)',
+      })
 
       html2Canvas(document.querySelector(`#printplan`), {
         allowTaint: true,
@@ -317,7 +327,7 @@ export default {
         pageData = canvas.toDataURL("image/jpeg", 1.0);
         let PDF = new JsPDF("", "pt", "a4");
         if (leftHeight < pageHeight) {
-          PDF.addImage(pageData, "JPEG", 0, 0, imgWidth, imgHeight);
+          PDF.addImage(pageData, "JPEG", 0, 50, imgWidth, imgHeight);
         } else {
           while (leftHeight > 0) {
             PDF.addImage(pageData, "JPEG", 0, position, imgWidth, imgHeight);
@@ -329,6 +339,7 @@ export default {
           }
         }
         PDF.save("plan" + ".pdf");
+        loading.close()
       });
     },
   }
