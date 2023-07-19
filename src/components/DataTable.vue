@@ -205,7 +205,10 @@ export default {
         var singleRunDistance = runSchedule.excise[runi]
         distance += singleRunDistance.distance
       }
-      runDistance = runDistance + distance.toFixed(1)
+      if(distance > 0) {
+        runDistance = runDistance + distance.toFixed(1)
+      }
+      
 
       if(runSchedule.cold) {
         if(cold.length > 0) {
