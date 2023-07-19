@@ -182,7 +182,7 @@ export default {
       }
       var distance = this.$options.methods.distanceOfDay(week,day,this.warm,this.cold)
       if(distance > 0) {
-        description = description + '<br />' + distance.toFixed(1) + ' 公里'
+        description = description + '<br />' + this.warm.toFixed(1) + '+' +  distance.toFixed(1) + '+' + thie.cold.toFixed(1) + ' 公里'
       }
       var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow,this.warm,this.cold)
       if(duration.length > 0) {
@@ -193,16 +193,16 @@ export default {
     distanceOfDay(week, day, warm,cold) {
       var runSchedule = week.schedule[day]
       var distance = 0
-      if(runSchedule.warm) {
-        if(warm.length > 0) {
-          distance += parseFloat(warm)
-        }
-      }
-      if(runSchedule.cold) {
-        if(cold.length > 0) {
-          distance += parseFloat(cold)
-        }
-      }
+      // if(runSchedule.warm) {
+      //   if(warm.length > 0) {
+      //     distance += parseFloat(warm)
+      //   }
+      // }
+      // if(runSchedule.cold) {
+      //   if(cold.length > 0) {
+      //     distance += parseFloat(cold)
+      //   }
+      // }
       for (var runi in runSchedule.excise) {
         var runDistance = runSchedule.excise[runi]
         distance += runDistance.distance
