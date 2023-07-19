@@ -180,8 +180,8 @@ export default {
       if(exciseDesc != undefined) {
         description = description + '<br />' + exciseDesc
       }
-      var distance = this.$options.methods.distanceOfDay(week,day,this.warm,this.cold)
-      if(distance > 0) {
+      var distance = this.$options.methods.distanceOfDayString(week,day,this.warm,this.cold)
+      if(distance.length > 0) {
         description = description + '<br />' + distance + ' 公里'
       }
       var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow,this.warm,this.cold)
@@ -190,34 +190,52 @@ export default {
       }
       return description;
     },
-    distanceOfDay(week, day, warm,cold) {
+    distanceOfDayString(week, day, warm, cold) {
       var runDistance = ''
       var runSchedule = week.schedule[day]
       var distance = 0
       if(runSchedule.warm) {
         if(warm.length > 0) {
-          distance += parseFloat(warm)
           runDistance += parseFloat(warm).toFixed(1)
           runDistance += '+'
         }
       }
 
       for (var runi in runSchedule.excise) {
-        var runDistance = runSchedule.excise[runi]
-        distance += runDistance.distance
+        var singleRunDistance = runSchedule.excise[runi]
+        distance += singleRunDistance.distance
       }
-      runDistance += distance.toFixed(1)
+      runDistance = runDistance + distance.toFixed(1)
+
+      if(runSchedule.cold) {
+        if(cold.length > 0) {
+          runDistance += '+'
+          runDistance += parseFloat(cold).toFixed(1) 
+        }
+      }
+      return runDistance
+    },
+
+    distanceOfDay(week, day, warm,cold) {
+      var runSchedule = week.schedule[day]
+      var distance = 0
+      if(runSchedule.warm) {
+        if(warm.length > 0) {
+          distance += parseFloat(warm)
+        }
+      }
+
+      for (var runi in runSchedule.excise) {
+        var singleRunDistance = runSchedule.excise[runi]
+        distance += singleRunDistance.distance
+      }
 
       if(runSchedule.cold) {
         if(cold.length > 0) {
           distance += parseFloat(cold)
-          runDistance += '+'
-          runDistance += parseFloat(cold).toFixed(1)
-          
         }
       }
-      return runDistance
-      // + this.warm.toFixed(1) + '+' +  distance.toFixed(1) + '+' + thie.cold.toFixed(1) +
+      return distance
     },
 
     distanceOfWeek(week) {
