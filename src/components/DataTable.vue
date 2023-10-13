@@ -20,7 +20,7 @@
       <el-table-column prop="easyfast" label="Easy fast" />
       <el-table-column prop="lsd" label="LSD" />
       <el-table-column prop="tempo" label="MP" />
-      <el-table-column prop="strenght" label="@MP-10s" />
+      <el-table-column prop="strenght" label="@MP-10" />
       <el-table-column prop="ten" label="10 KM " />
       <el-table-column prop="five" label="5 KM " />
     </el-table>
@@ -178,15 +178,15 @@ export default {
       var description = week.schedule[day].desc
       var exciseDesc = this.$options.methods.exciseDiscriptionOfDay(week,day)
       if(exciseDesc != undefined) {
-        description = description + '<br />' + exciseDesc
+        description = description + '<br /><br />' + exciseDesc
       }
       var distance = this.$options.methods.distanceOfDayString(week,day,this.warm,this.cold)
       if(distance.length > 0) {
-        description = description + '<br />' + distance + '  KM '
+        description = description + '<br /><br />' + distance + '  KM '
       }
       var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow,this.warm,this.cold)
       if(duration.length > 0) {
-        description = description + '<br />' + duration
+        description = description + '<br /><br />' + duration
       }
       return description;
     },

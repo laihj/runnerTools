@@ -22,7 +22,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "Tempo"
+                    "desc": "Tempo @MP"
                 },
                 {    
                     "day": 3,
@@ -47,8 +47,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "@MP-10s",
-                    "excisedesc": "2  x  1.6 KM 间歇 400米Rest"
+                    "desc": "",
+                    "excisedesc": "2 x 1.6 KM 间歇 400米Rest"
                 },
                 {    
                     "day": 4,
@@ -163,8 +163,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "@5k-10k Pace",
-                    "excisedesc": "10  x  400米间歇 400米Rest"
+                    "desc": "",
+                    "excisedesc": "10 x 400米间歇 400米Rest"
                 },
                 {    
                     "day": 7,
@@ -253,8 +253,8 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "@5k-10k Pace",
-                    "excisedesc": "10  x  400米间歇 400米Rest"
+                    "desc": "",
+                    "excisedesc": "10 x 400米间歇 400米Rest"
                 },
                 {    
                     "day": 7,
