@@ -26,10 +26,10 @@
     </el-table>
   </div>
   <br />
-  <br />
   <div id="plan" v-if="!showAll">
     <div class="opration">
       <el-row :gutter="20">
+        <el-col :span="0.35"><div></div></el-col>
         <el-col :span="4">
           <el-select v-model="planType" placeholder="Choose Plan" size="large" @change="selectOne">
             <el-option
@@ -42,10 +42,10 @@
           </el-select>
         </el-col>
         <el-col :span="1.4"><div>Warm up</div></el-col>
-        <el-col :span="3"><el-input v-model="cold" placeholder="Coll down" /></el-col>
+        <el-col :span="3"><el-input v-model="cold" placeholder="Warm up" /></el-col>
         <el-col :span="1"><div></div></el-col>
         <el-col :span="1.4"><div>Coll down</div></el-col>
-        <el-col :span="3"><el-input v-model="cold" placeholder="Coll down" /></el-col>
+        <el-col :span="3"><el-input v-model="cold" placeholder="Cool down" /></el-col>
       </el-row>
     </div>
     <br />
@@ -103,7 +103,6 @@
         </el-table-column>
       </el-table>
     </div>
-    
   </div>
 </div>
   <br />
