@@ -12,17 +12,17 @@
       :header-row-style="{ background: '#555' }"
       @row-click="rowClick"
     >
-      <el-table-column prop="full" label="全马目标">
+      <el-table-column prop="full" label="Full Marathon">
       </el-table-column>
-      <el-table-column prop="half" label="半马目标" />
-      <el-table-column prop="recovery" label="恢复" />
-      <el-table-column prop="easyslow" label="轻松跑慢" />
-      <el-table-column prop="easyfast" label="轻松跑快" />
+      <el-table-column prop="half" label="Half Marathon" />
+      <el-table-column prop="recovery" label="Rest" />
+      <el-table-column prop="easyslow" label="Easy slow" />
+      <el-table-column prop="easyfast" label="Easy fast" />
       <el-table-column prop="lsd" label="LSD" />
-      <el-table-column prop="tempo" label="马拉松配速" />
-      <el-table-column prop="strenght" label="力量跑" />
-      <el-table-column prop="ten" label="10公里" />
-      <el-table-column prop="five" label="5公里" />
+      <el-table-column prop="tempo" label="MP" />
+      <el-table-column prop="strenght" label="@MP-10s" />
+      <el-table-column prop="ten" label="10 KM " />
+      <el-table-column prop="five" label="5 KM " />
     </el-table>
   </div>
   <br />
@@ -31,7 +31,7 @@
     <div class="opration">
       <el-row :gutter="20">
         <el-col :span="4">
-          <el-select v-model="planType" placeholder="选择计划" size="large" @change="selectOne">
+          <el-select v-model="planType" placeholder="Choose Plan" size="large" @change="selectOne">
             <el-option
               v-for="item in options"
               :key="item.value"
@@ -41,11 +41,11 @@
             </el-option>
           </el-select>
         </el-col>
-        <el-col :span="1.4"><div>热身距离</div></el-col>
-        <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
+        <el-col :span="1.4"><div>Warm up</div></el-col>
+        <el-col :span="3"><el-input v-model="cold" placeholder="Coll down" /></el-col>
         <el-col :span="1"><div></div></el-col>
-        <el-col :span="1.4"><div>缓和距离</div></el-col>
-        <el-col :span="3"><el-input v-model="cold" placeholder="缓和距离" /></el-col>
+        <el-col :span="1.4"><div>Coll down</div></el-col>
+        <el-col :span="3"><el-input v-model="cold" placeholder="Coll down" /></el-col>
       </el-row>
     </div>
     <br />
@@ -59,44 +59,44 @@
         :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
         :header-row-style="{ background: '#555' }"
       >
-        <el-table-column prop="week" label="周数" width="100" />
-        <el-table-column label="周一" >
+        <el-table-column prop="week" label="Week" width="100" />
+        <el-table-column label="Monday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 0)"></span>
           </template>
         </el-table-column>
-        <el-table-column label="周二" >
+        <el-table-column label="Tuesday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 1)"></span>
           </template>
         </el-table-column>
-        <el-table-column label="周三" >
+        <el-table-column label="Wednesday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 2)"></span>
           </template>
         </el-table-column>
-        <el-table-column label="周四" >
+        <el-table-column label="Thursday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 3)"></span>
           </template>
         </el-table-column>
-        <el-table-column label="周五" >
+        <el-table-column label="Friday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 4)"></span>
           </template>
         </el-table-column>
-        <el-table-column label="周六" >
+        <el-table-column label="Saturday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 5)"></span>
           </template>
         </el-table-column>
-        <el-table-column label="周日" >
+        <el-table-column label="Sunday" >
           <template #default="scope">
             <span v-html="discriptionOfWeekDay(scope.row, 6)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column label="周跑量" width="200" >
+        <el-table-column label="Weekly Mileage" width="200" >
           <template #default="scope">
             <span>{{ distanceOfWeek(scope.row) }}</span>
           </template>
@@ -108,7 +108,7 @@
 </div>
   <br />
   <br />
-  <el-button type="primary" @click="print" >打印计划</el-button>
+  <el-button type="primary" @click="print" >Get PDF</el-button>
   <br />
   <br />
 </template>
@@ -135,15 +135,15 @@ export default {
       cold:"1.6",
       printLayout:false,
       loading:false,
-      planType: "初级跑步计划",
+      planType: "Beginner",
       options : [
             {
               value: 'basic',
-              label: '初级跑步计划',
+              label: 'Beginner',
             },
             {
               value: 'advance',
-              label: '高级跑步计划',
+              label: 'Advanced',
             }]
     }
   },
@@ -151,7 +151,7 @@ export default {
   },
   methods: {
     selectOne(event,item) {
-        if(this.planType == '初级跑步计划') {
+        if(this.planType == 'Beginner') {
           this.selectedPlanData = basicPlan
         } else {
           this.selectedPlanData = advancePlan
@@ -182,7 +182,7 @@ export default {
       }
       var distance = this.$options.methods.distanceOfDayString(week,day,this.warm,this.cold)
       if(distance.length > 0) {
-        description = description + '<br />' + distance + ' 公里'
+        description = description + '<br />' + distance + '  KM '
       }
       var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow,this.warm,this.cold)
       if(duration.length > 0) {

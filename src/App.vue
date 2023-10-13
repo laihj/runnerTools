@@ -1,6 +1,6 @@
 <template>
-  <h1>汉森马拉松训练法配速表</h1>
-  <h3 class="hint">选择自己的目标配速生成训练计划</h3>
+  <h1>Hanson Marathon Method Pace Chart</h1>
+  <h3 class="hint">Generate Training Plan Based on Your Marathon Goal</h3>
   <DataTable :data="paceArray" />
 </template>
 

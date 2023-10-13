@@ -9,7 +9,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 2,
@@ -17,7 +17,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 3,
@@ -25,7 +25,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -38,7 +38,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 5,
@@ -46,7 +46,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 6,
@@ -59,7 +59,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -72,7 +72,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -86,7 +86,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 2,
@@ -99,7 +99,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 3,
@@ -107,7 +107,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -120,7 +120,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 5,
@@ -133,7 +133,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -146,7 +146,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -159,7 +159,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -173,7 +173,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 2,
@@ -186,7 +186,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 3,
@@ -194,7 +194,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -207,7 +207,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 5,
@@ -220,7 +220,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -233,7 +233,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -246,7 +246,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -260,7 +260,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 2,
@@ -273,7 +273,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 3,
@@ -281,7 +281,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -294,7 +294,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 5,
@@ -307,7 +307,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -320,7 +320,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -333,7 +333,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -347,7 +347,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 2,
@@ -360,7 +360,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 3,
@@ -368,7 +368,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -381,7 +381,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 5,
@@ -394,7 +394,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -407,7 +407,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -420,7 +420,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -439,7 +439,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -540,8 +540,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "速度跑",
-                    "excisedesc": "12组400米间歇跑，组间400米恢复"
+                    "desc": "@5k-10k Pace",
+                    "excisedesc": "12 x 400m @5k-10k Pace, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -549,7 +549,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -562,7 +562,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -575,7 +575,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -588,7 +588,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -601,7 +601,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -620,7 +620,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -689,8 +689,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "速度跑",
-                    "excisedesc": "8组600米间歇跑，组间400米恢复"
+                    "desc": "@5k-10k Pace",
+                    "excisedesc": "8 x 600m @5k-10k Pace, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -698,7 +698,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -711,7 +711,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -724,7 +724,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -737,7 +737,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -750,7 +750,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -769,7 +769,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -822,8 +822,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "速度跑",
-                    "excisedesc": "6组800米间歇跑，组间400米恢复"
+                    "desc": "@5k-10k Pace",
+                    "excisedesc": "6 x 800m @5k-10k Pace, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -831,7 +831,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -844,7 +844,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 8,
@@ -857,7 +857,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 9.75,
@@ -870,7 +870,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -883,7 +883,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -902,7 +902,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -947,8 +947,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "速度跑",
-                    "excisedesc": "5组1公里间歇跑，组间400米恢复"
+                    "desc": "@5k-10k Pace",
+                    "excisedesc": "5 x 1 KM @5k-10k Pace, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -956,7 +956,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -969,7 +969,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -982,7 +982,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -995,7 +995,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1008,7 +1008,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1027,7 +1027,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1064,8 +1064,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "速度跑",
-                    "excisedesc": "4组1.2公里间歇跑，组间400米恢复"
+                    "desc": "@5k-10k Pace",
+                    "excisedesc": "4 x 1.2 KM @5k-10k Pace, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -1073,7 +1073,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1086,7 +1086,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1099,7 +1099,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1112,7 +1112,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1125,7 +1125,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1144,7 +1144,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1197,8 +1197,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "6组1.6公里间歇跑，组间400米恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "6 x 1.6 KM @MP-10s, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -1206,7 +1206,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1219,7 +1219,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1232,7 +1232,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1245,7 +1245,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1258,7 +1258,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1277,7 +1277,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1314,8 +1314,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "4组2.4公里间歇跑，组间800米恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "4 x 2.4 KM @MP-10s, w. 800m rest"
                 },
                 {    
                     "day": 3,
@@ -1323,7 +1323,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1336,7 +1336,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1349,7 +1349,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1362,7 +1362,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1375,7 +1375,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1394,7 +1394,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1423,8 +1423,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "3组3.2公里间歇跑，组间800米恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "3 x 3.2 KM @MP-10s, w. 800m rest"
                 },
                 {    
                     "day": 3,
@@ -1432,7 +1432,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1445,7 +1445,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1458,7 +1458,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1471,7 +1471,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1484,7 +1484,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1503,7 +1503,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1524,8 +1524,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "2组5公里间歇跑，组间1.6公里恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "2 x 5 KM @MP-10s， w. 1.6 KM Rest"
                 },
                 {    
                     "day": 3,
@@ -1533,7 +1533,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1546,7 +1546,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1559,7 +1559,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1572,7 +1572,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1585,7 +1585,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1604,7 +1604,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1633,8 +1633,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "3组3.2公里间歇跑，组间800米恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "3 x 3.2 KM @MP-10s, w. 800m rest"
                 },
                 {    
                     "day": 3,
@@ -1642,7 +1642,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1655,7 +1655,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1668,7 +1668,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1681,7 +1681,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1694,7 +1694,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1713,7 +1713,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1750,8 +1750,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "4组2.4公里间歇跑，组间800米恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "4 x 2.4 KM @MP-10s, w. 800m rest"
                 },
                 {    
                     "day": 3,
@@ -1759,7 +1759,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1772,7 +1772,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1785,7 +1785,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1798,7 +1798,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1811,7 +1811,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "长距离跑"
+                    "desc": "LSD"
                 }
             ]
     },
@@ -1830,7 +1830,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1883,8 +1883,8 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "力量跑",
-                    "excisedesc": "6组1.6公里间歇跑，组间400米恢复"
+                    "desc": "@MP-10s",
+                    "excisedesc": "6 x 1.6 KM @MP-10s, w. 400m rest"
                 },
                 {    
                     "day": 3,
@@ -1892,7 +1892,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1905,7 +1905,7 @@
                         }
                     ],
                     "cold": true,
-                    "desc": "节奏跑"
+                    "desc": "Tempo"
                 },
                 {    
                     "day": 5,
@@ -1918,7 +1918,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -1931,7 +1931,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
@@ -1944,7 +1944,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 }
             ]
     },
@@ -1963,7 +1963,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 2,
@@ -1976,7 +1976,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 3,
@@ -1984,7 +1984,7 @@
                     "warm": false,
                     "excise" : [],
                     "cold": false,
-                    "desc": "休息"
+                    "desc": "Rest"
                 },
                 {    
                     "day": 4,
@@ -1997,7 +1997,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 5,
@@ -2010,7 +2010,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 6,
@@ -2023,7 +2023,7 @@
                         }
                     ],
                     "cold": false,
-                    "desc": "轻松跑"
+                    "desc": "Easy"
                 },
                 {    
                     "day": 7,
