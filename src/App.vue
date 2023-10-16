@@ -1,5 +1,5 @@
 <template>
-  <h1>Hanson Marathon Method Pace Chart</h1>
+  <h1>Hanson Marathon Method Pace Calculator</h1>
   <h3 class="hint">Generate Training Plan Based on Your Marathon Goal</h3>
   <DataTable :data="paceArray" />
 </template>
