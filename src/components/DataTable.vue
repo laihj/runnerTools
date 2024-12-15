@@ -42,7 +42,7 @@
           </el-select>
         </el-col>
         <el-col :span="1.4"><div>Warm up</div></el-col>
-        <el-col :span="3"><el-input v-model="cold" placeholder="Warm up" /></el-col>
+        <el-col :span="3"><el-input v-model="warm" placeholder="Warm up" /></el-col>
         <el-col :span="1"><div></div></el-col>
         <el-col :span="1.4"><div>Coll down</div></el-col>
         <el-col :span="3"><el-input v-model="cold" placeholder="Cool down" /></el-col>
@@ -177,15 +177,15 @@ export default {
       var description = week.schedule[day].desc
       var exciseDesc = this.$options.methods.exciseDiscriptionOfDay(week,day)
       if(exciseDesc != undefined) {
-        description = description + '<br /><br />' + exciseDesc
+        description = description + '<br />' + exciseDesc
       }
       var distance = this.$options.methods.distanceOfDayString(week,day,this.warm,this.cold)
       if(distance.length > 0) {
-        description = description + '<br /><br />' + distance + '  KM '
+        description = description + '<br />' + distance + '  KM '
       }
       var duration = this.$options.methods.durationOfDay(this,week,day,this.selectedDataRow,this.warm,this.cold)
       if(duration.length > 0) {
-        description = description + '<br /><br />' + duration
+        description = description + '<br /><span class="duration-text">' + duration + '</span>'
       }
       return description;
     },
@@ -406,5 +406,18 @@ export default {
 
 .el-table-column {
   text-align: center;
+}
+
+.el-table td {
+  padding: 5px 0;  
+}
+
+.el-table td br {
+  margin: 3px 0;  
+  display: block;
+}
+
+.duration-text {
+  font-size: 0.9em;
 }
 </style>
