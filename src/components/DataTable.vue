@@ -2,114 +2,122 @@
 <div id="printplan">
   <br />
   <br />
-  <div id="pace">
-    <el-table
-      :data="tableData"
-      border
-      stripe
-      :header-cell-style="{ 'text-align': 'center', background: '#42b983', color: '#fff', 'font-size': '1.3em' }"
-      :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
-      :header-row-style="{ background: '#555' }"
-      @row-click="rowClick"
-    >
-      <el-table-column prop="full" label="Full Marathon">
-      </el-table-column>
-      <el-table-column prop="half" label="Half Marathon" />
-      <el-table-column prop="recovery" label="Rest" />
-      <el-table-column prop="easyslow" label="Easy slow" />
-      <el-table-column prop="easyfast" label="Easy fast" />
-      <el-table-column prop="lsd" label="LSD" />
-      <el-table-column prop="tempo" label="MP" />
-      <el-table-column prop="strenght" label="@MP-10" />
-      <el-table-column prop="ten" label="10 KM " />
-      <el-table-column prop="five" label="5 KM " />
-    </el-table>
-  </div>
-  <br />
-  <div id="plan" v-if="!showAll">
-    <div class="opration">
-      <el-row :gutter="20">
-        <el-col :span="0.35"><div></div></el-col>
-        <el-col :span="4">
-          <el-select v-model="planType" placeholder="Choose Plan" size="large" @change="selectOne">
-            <el-option
-              v-for="item in options"
-              :key="item.value"
-              :label="item.label"
-              :value="item.label"
-            >
-            </el-option>
-          </el-select>
-        </el-col>
-        <el-col :span="1.4"><div>Warm up</div></el-col>
-        <el-col :span="3"><el-input v-model="warm" placeholder="Warm up" /></el-col>
-        <el-col :span="1"><div></div></el-col>
-        <el-col :span="1.4"><div>Coll down</div></el-col>
-        <el-col :span="3"><el-input v-model="cold" placeholder="Cool down" /></el-col>
-      </el-row>
-    </div>
-    <br />
-    <div id="planTable">
+  <div class="container">
+    <div id="pace">
       <el-table
-        v-loading="loading"
-        :data="selectedPlanData"
+        :data="tableData"
         border
         stripe
         :header-cell-style="{ 'text-align': 'center', background: '#42b983', color: '#fff', 'font-size': '1.3em' }"
         :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
         :header-row-style="{ background: '#555' }"
+        @row-click="rowClick"
       >
-        <el-table-column prop="week" label="Week" width="100" />
-        <el-table-column label="Monday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 0)"></span>
-          </template>
+        <el-table-column prop="full" label="Full Marathon">
         </el-table-column>
-        <el-table-column label="Tuesday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 1)"></span>
-          </template>
-        </el-table-column>
-        <el-table-column label="Wednesday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 2)"></span>
-          </template>
-        </el-table-column>
-        <el-table-column label="Thursday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 3)"></span>
-          </template>
-        </el-table-column>
-        <el-table-column label="Friday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 4)"></span>
-          </template>
-        </el-table-column>
-        <el-table-column label="Saturday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 5)"></span>
-          </template>
-        </el-table-column>
-        <el-table-column label="Sunday" >
-          <template #default="scope">
-            <span v-html="discriptionOfWeekDay(scope.row, 6)"></span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="Weekly Mileage" width="200" >
-          <template #default="scope">
-            <span>{{ distanceOfWeek(scope.row) }}</span>
-          </template>
-        </el-table-column>
+        <el-table-column prop="half" label="Half Marathon" />
+        <el-table-column prop="recovery" label="Rest" />
+        <el-table-column prop="easyslow" label="Easy slow" />
+        <el-table-column prop="easyfast" label="Easy fast" />
+        <el-table-column prop="lsd" label="LSD" />
+        <el-table-column prop="tempo" label="MP" />
+        <el-table-column prop="strenght" label="@MP-10" />
+        <el-table-column prop="ten" label="10 KM " />
+        <el-table-column prop="five" label="5 KM " />
       </el-table>
     </div>
+    <br />
+    <div id="plan" v-if="!showAll">
+      <div class="opration">
+        <el-row type="flex" align="middle" class="controls-row">
+          <el-col :span="4">
+            <el-select v-model="planType" placeholder="Choose Plan" size="large" @change="selectOne">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.label"
+              >
+              </el-option>
+            </el-select>
+          </el-col>
+          <el-col :span="4">
+            <div class="input-group">
+              <label>Warm up</label>
+              <el-input v-model="warm" placeholder="Warm up" />
+            </div>
+          </el-col>
+          <el-col :span="4">
+            <div class="input-group">
+              <label>Cool down</label>
+              <el-input v-model="cold" placeholder="Cool down" />
+            </div>
+          </el-col>
+        </el-row>
+      </div>
+      <br />
+      <div id="planTable">
+        <el-table
+          v-loading="loading"
+          :data="selectedPlanData"
+          border
+          stripe
+          :header-cell-style="{ 'text-align': 'center', background: '#42b983', color: '#fff', 'font-size': '1.3em' }"
+          :cell-style="{ 'text-align': 'center', 'font-size': '1.2em' }"
+          :header-row-style="{ background: '#555' }"
+        >
+          <el-table-column prop="week" label="Week" width="100" />
+          <el-table-column label="Monday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 0)"></span>
+            </template>
+          </el-table-column>
+          <el-table-column label="Tuesday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 1)"></span>
+            </template>
+          </el-table-column>
+          <el-table-column label="Wednesday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 2)"></span>
+            </template>
+          </el-table-column>
+          <el-table-column label="Thursday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 3)"></span>
+            </template>
+          </el-table-column>
+          <el-table-column label="Friday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 4)"></span>
+            </template>
+          </el-table-column>
+          <el-table-column label="Saturday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 5)"></span>
+            </template>
+          </el-table-column>
+          <el-table-column label="Sunday" >
+            <template #default="scope">
+              <span v-html="discriptionOfWeekDay(scope.row, 6)"></span>
+            </template>
+          </el-table-column>
+
+          <el-table-column label="Weekly Mileage" width="200" >
+            <template #default="scope">
+              <span>{{ distanceOfWeek(scope.row) }}</span>
+            </template>
+          </el-table-column>
+        </el-table>
+      </div>
+    </div>
   </div>
-</div>
   <br />
   <br />
   <el-button type="primary" @click="print" >Get PDF</el-button>
   <br />
   <br />
+</div>
 </template>
 
 <script>
@@ -379,6 +387,54 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#pace {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#plan {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.opration {
+  width: 85%;  
+  margin: 0 auto;
+  padding: 0;
+}
+
+.opration .el-row {
+  margin: 0;
+}
+
+#planTable {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#planTable .el-table {
+  width: 100% !important;
+}
+
+.el-table {
+  width: 100% !important;
+}
+
+.text-right {
+  text-align: right;
+  padding-right: 10px;
+}
+
 .el-row {
   align-items: center;
   margin-bottom: 20px;
@@ -389,16 +445,39 @@ export default {
 .el-col {
   border-radius: 4px;
 }
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.el-select {
+  width: 100%;
+}
+
+.controls-row .el-select {
+  display: block;
+}
+
 .hello {
   margin: 0 auto;
 }
 .opration {
   width: 95%;
-  margin: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
 }
-
+.opration .el-row {
+  width: 100%;
+}
+#pace {
+  width: 95%;
+  margin: 0 auto;
+}
 .el-table {
-  width: 90%;
+  width: 95%;
   border-collapse: collapse;
   border-color: #acd7c3;
   margin: 0 auto;
@@ -419,5 +498,59 @@ export default {
 
 .duration-text {
   font-size: 0.9em;
+}
+
+.text-right {
+  text-align: right;
+  padding-right: 10px;
+}
+.grid-content {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group label {
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.input-group .el-input {
+  width: 120px;
+}
+
+.controls-row {
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group label {
+  white-space: nowrap;
+}
+
+.input-group .el-input {
+  width: 100px;
+}
+
+.el-select {
+  border: none;
+  width: 100%;
+}
+
+.controls-row .el-select {
+  display: block;
 }
 </style>
